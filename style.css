@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* Set theme color for buttons */
+.stButton > button {
+    background-color: #d32f2f !important;
+    color: white !important;
+    border-radius: 5px;
+}
+
+/* Apply a hover effect to columns */
+.metric-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add border to the metrics by wrapping them in divs */
+.metric-container .stMetric {
+    border: 2px solid #d32f2f; /* Red border */
+    border-radius: 10px;  /* Rounded corners */
+    padding: 10px; /* Add padding inside the border */
+    background-color: #f8f8f8; /* Light gray background for metrics */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Animation for metric numbers */
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+.stMetric span {
+    font-size: 1.5em;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Change the text color to red when hovering over metrics */
+.metric-container:hover .stMetric {
+    color: #d32f2f !important;
+}
+
+/* Add some padding around the columns */
+.stColumn {
+    padding: 15px;
+}
